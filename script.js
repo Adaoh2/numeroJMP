@@ -17,21 +17,31 @@ function afficherMdp() {
     var final = document.getElementById("res2");
     let codePays = numeroPays();
 
+    const parDroite = ")";
+    const parGauche = "(";
+    const tiret = "-";
+    const espace = " ";
 
-    var formdata = new FormData();
-    formdata.append("prompt", final);
+    
 
-    var requestOptions = {
-    method: 'POST',
-    body: formdata,
-    redirect: 'follow'
-    };
+    if (numero.startsWith('+')) {
+        numero = numero.replace(/\D/g,'')
+        final.value = "+" + numero + "@cheogram.com";
+        final.innerHTML = final.value;
+        numero.select();
+        numero.setSelectionRange(0, 99999); /* For mobile devices */
+        numero.focus;
 
-    fetch("https://jabber-iq-gateway.api.cheogram.com/?to=cheogram.com", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+        /* Copy the text inside the text field */
+        navigator.clipboard.writeText(final.value);
+    }
+    else {
+        numero = numero.replace(/\D/g,'')
+        final.value = codePays + numero + "@cheogram.com";
+        final.innerHTML = final.value;
 
+        final.select();
+        document.execCommand("copy");
 
+    }
 }
-
