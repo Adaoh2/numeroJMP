@@ -101,6 +101,12 @@ iframe {
     text-align: center;
 }
 
+.switch-container {
+    background: #1a1c1e;
+    border-radius: 15px;
+    padding: 5px
+}
+
 /* ====================================================================== */
 /* ========================= ADAPTATIONS MOBILE ========================= */
 /* ====================================================================== */
@@ -180,4 +186,7 @@ iframe {
 	color: rgb(0, 140, 255);
 	text-decoration: none;
 	}
+    .switch-container {
+    background: #ececec;
+}
 }

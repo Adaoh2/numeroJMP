@@ -16,9 +16,14 @@
 <body>
 	<h1 id="titre">Générateur numero de téléphone Cheogram</h1>
 	<div class="content">
+        <a href="./index.html">
+            <button class="ripple" style="width:49%; background:#0092cc55; backdrop-filter: saturate(10%);">Private</button>
+        </a>
+        <button class="ripple" style="width:49%;">Group</button>
+        <br>
+        <br>
 
 		<form onSubmit="return false;" onSubmit="numeroFinal.value = afficherMdp(); return false;">
-
 
 			<label>Choisssez le pays:</label>
             <select name="countryCode" id="codePays">
@@ -246,9 +251,7 @@
 			<input  type="text" id="num" placeholder="+11234567890" autofocus>
 
 			<!-- Bouton Generer -->
-
 			<button class="ripple" onclick="addNumber()">Ajouter</button>
-
 
             <div style="visibility: hidden; height: 1px;" id="casenumero">
                 <input name="numeroFinal" type="text" readonly id="res2"/>
