@@ -19,8 +19,8 @@
 
         <label>Choose the country:</label>
             <select name="countryCode" id="codePays">
-                <option data-countryCode="EMPTY" value="">Empty (If the area code is already in the number)</option>
                 <option data-countryCode="US" value="1">USA/Canada (+1)</option>
+                <option data-countryCode="EMPTY" value="">Empty (If the area code is already in the number)</option>
                 <optgroup label="Other countries">
                     <option data-countryCode="DZ" value="213">Algeria (+213)</option>
                     <option data-countryCode="AD" value="376">Andorra (+376)</option>
@@ -245,7 +245,7 @@
             <!--#include virtual="./codes.html" -->
 
 			<!-- Bouton Generer -->
-			<button class="ripple" type="submit" value="Confirmer" onclick="afficherMdp()">Generate</button>
+			<button class="ripple" type="submit" value="Confirmer" onclick="afficherMdp('single')">Generate</button>
             <br>
             <br>
 
@@ -260,6 +260,6 @@
 	</div>
 
 <footer><a href='./index.html'><b>🇫🇷 Français</a></footer>
-<footer>The password is automatically copied to the clipboard</footer>
+<footer>The number is automatically copied to the clipboard</footer>
 </body>
 </html>

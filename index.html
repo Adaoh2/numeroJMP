@@ -16,13 +16,13 @@
 	<h1 id="titre">Générateur numero de téléphone Cheogram</h1>
 	<div class="content">
 
-		<form onSubmit="return false;" onSubmit="numeroFinal.value = afficherMdp(); return false;">
+		<form onSubmit="return false;" onSubmit="numeroFinal.value = afficherMdp('single'); return false;">
 
 
 			<label>Choisssez le pays:</label>
             <select name="countryCode" id="codePays">
-                <option data-countryCode="EMPTY" value="">Vide (Si déja présent dans le numéro)</option>
                 <option data-countryCode="US" value="1">USA/Canada (+1)</option>
+                <option data-countryCode="EMPTY" value="">Vide (Si déja présent dans le numéro)</option>
                 <optgroup label="Other countries">
                     <option data-countryCode="DZ" value="213">Algeria (+213)</option>
                     <option data-countryCode="AD" value="376">Andorra (+376)</option>
@@ -245,10 +245,7 @@
 			<input  type="text" id="num" placeholder="+11234567890" autofocus>
 
 			<!-- Bouton Generer -->
-            <a href="xmpp:+1482848429@cheogram.com">
-			    <button class="ripple" type="submit" value="Confirmer" onclick="afficherMdp()">Generer</button>
-            </a>
-			<!-- <button class="ripple" type="submit" value="Confirmer" onclick="afficherMdp()">Generer</button> -->
+			<button class="ripple" type="submit" value="Confirmer" onclick="afficherMdp('single')">Generer</button>
             <br>
             <br>
 
@@ -264,6 +261,6 @@
 	</div>
 
 <footer><a href='./index_en.html'><b>🇬🇧 English</a></footer>
-<footer>Le mot de passe est automatiquement copié dans le presse-papier</footer>
+<footer>Le numéro est automatiquement copié dans le presse-papier</footer>
 </body>
 </html>
